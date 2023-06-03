@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        
+ 	
+ 		
+ 		  <bean	id="que1"	class="com.collection.userdefine.Question"	>
+        		
+        		<property name="qid"	value="1"	/>
+        		<property name="qname"	value="What is java ?"	/>
+        		
+        		<property name="answer">
+        			<list>
+        					<ref	bean="ans1"	/>
+        					<ref	bean="ans2"	/>
+        			</list>
+        		</property>
+        </bean>
+        
+        <bean	id="ans1"	class="com.collection.userdefine.Answer"	>
+ 		
+ 					<property name="aid"	value="1"	/>
+ 					<property name="ans"	value=" java is an oops"	/>
+ 		
+ 		</bean>
+ 		
+ 			<bean id="ans2"	class="com.collection.userdefine.Answer"	>
+ 		
+ 					<property name="aid"	value="2"	/>
+ 					<property name="ans"	value="	 java is a platform independent"	/>
+ 		
+ 		</bean>
+ 
+ </beans>
