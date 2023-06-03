@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- Bean for each class -->
+
+	<!-- Menu 1 -->
+	<bean name="men1" class="com.model.Menu">
+		<constructor-arg value="1" />
+		<constructor-arg value="Rajasthani Dish"  />
+
+	</bean>
+
+	<!-- Menu 2 -->
+	<bean name="men2" class="com.model.Menu">
+			<constructor-arg value="2" />
+			<constructor-arg value="Maharashtrian Dish"  />
+
+	</bean>
+
+	<!-- Menu 3 -->
+	<bean name="men3" class="com.model.Menu">
+			<constructor-arg value="3" />
+			<constructor-arg value="Punjabi Dish"  />
+	</bean>
+
+
+	<!-- Restorent 1 -->
+	<bean id="res1" class="com.model.Restorent">
+			<constructor-arg value="1" />
+			<constructor-arg value="Taj"  />
+		
+		<constructor-arg >
+			<list>
+				<ref bean="men1" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<!-- Restorent 2 -->
+	<bean id="res2" class="com.model.Restorent">
+			<constructor-arg value="2" />
+			<constructor-arg value="lee Royal"  />
+
+		<constructor-arg >
+			<list>
+				<ref bean="men2" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<!-- Restorent 3 -->
+
+	<bean id="res3" class="com.model.Restorent">
+			<constructor-arg value="3" />
+			<constructor-arg value="Diamond"  />	
+		
+		<constructor-arg >
+			<list>
+				<ref bean="men3" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>

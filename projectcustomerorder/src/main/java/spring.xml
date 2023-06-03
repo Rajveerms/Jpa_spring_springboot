@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans 	xmlns="http://www.springframework.org/schema/beans"
+  	  	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<bean id="prod" class="com.model.Product">
+		<property name="pid" 	value="101" />
+		<property name="pname"  value="laptop Lenevo" />
+	</bean>
+
+
+	<bean id="cust" class="com.model.Customer" >
+			<property  	name="cid" 		value="1" />
+			<property  	name="cname" 	value="Rajveer"/>
+			<property 	name="product"	ref="prod" />
+	</bean>
+</beans>
