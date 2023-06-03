@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- Bean for each class -->
+
+	<!-- Answer 1 -->
+	<bean name="a1" class="com.model.Answer">
+		<property name="ansId" value="1" />
+		<property name="ansDescription"
+			value="Java is an oop language" />
+
+	</bean>
+
+	<!-- Answer 2 -->
+	<bean name="a2" class="com.model.Answer">
+		<property name="ansId" value="2" />
+		<property name="ansDescription"
+			value="Static block is used to initialize the static data member." />
+
+	</bean>
+
+	<!-- Answer 3 -->
+	<bean name="a3" class="com.model.Answer">
+		<property name="ansId" value="3" />
+		<property name="ansDescription"
+			value="Java Virtual Machine (JVM).
+				   JVM is responsible for converting byte code into machine-readable code" />
+
+	</bean>
+
+
+	<!-- Question 1 -->
+	<bean id="qus" class="com.model.Question">
+
+		<property name="qId" value="1" />
+		<property name="qName" value="What is Java Language ?" />
+		<property name="ans">
+			<list>
+				<ref bean="a1" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Question 2 -->
+	<bean id="qus2" class="com.model.Question">
+
+		<property name="qId" value="2" />
+		<property name="qName" value="What is the static block?" />
+		<property name="ans">
+			<list>
+				<ref bean="a2" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Question 3 -->
+
+	<bean id="qus3" class="com.model.Question">
+
+		<property name="qId" value="3" />
+		<property name="qName" value="What is JVM?" />
+		<property name="ans">
+			<list>
+				<ref bean="a3" />
+			</list>
+		</property>
+	</bean>
+
+</beans>
