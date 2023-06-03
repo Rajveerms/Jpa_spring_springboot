@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="add" class="com.model.Address">
+		<constructor-arg value="1" />
+		<constructor-arg value="Pune" />
+	</bean>
+
+
+	<bean id="emp" class="com.model.Employee">
+		<constructor-arg value="101" />
+		<constructor-arg value="Vishal" />
+
+		<constructor-arg>
+			<ref bean="add" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="addre" class="com.model.Address">
+		<constructor-arg value="2" />
+		<constructor-arg value="Pimple Gurav " />
+	</bean>
+
+	 <bean id="emp1" class="com.model.Employee"> 
+	 	<constructor-arg value="102" />
+	 	<constructor-arg value="Veer" />
+	 	
+	 	<constructor-arg>
+			<ref bean="addre" />
+		</constructor-arg> 
+	 </bean>
+
+</beans>
